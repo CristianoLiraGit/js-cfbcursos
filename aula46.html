@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aula46.css">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600&family=Signika:wght@400;500;600&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    font-family: 'Signika', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+button {
+    width: 150px;
+    height: 40px;
+    background-color: #025;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.curso {
+    display: flex;
+    width: 200px;
+    border: 4px solid #888;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px 0px;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+}
+
+.selecionado {
+    background-color: #800 !important;
+    color: #fcc !important;
+    border-color: #f00 !important;
+}
+
+.c1 {
+    background-color: #ccc;
+    color: #444;
+}
+
+.c2 {
+    background-color: #444;
+    color: #ccc;
+}
+
+.caixa {
+    border: 4px solid #000;
+    background-color: #eee;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    height: 500px;
+    width: 300px;
+}
+
+.btn_lixeira {
+    width: 25px;
+    cursor: pointer;
+}
+
+.caixaFuncionalidades {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.comandos {
+    width: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#caixaNovoCurso input {
+    margin: 10px;
+    padding: 5px;
+}
+</style>
+<body>
+    <h1>Aula 46 - JavaScript - Método toggle</h1>
+    <main>
+        <div id="caixaNovoFuncionalidades" class="caixa">
+            <div id="caixaNovoCurso" class="caixaFuncionalidades">
+                <label for="nomeCurso">Nome do Curso</label>
+                <input type="text" name="nomeCurso" id="nomeCurso">
+                <button id="btnAdicionarAntes">Adicionar Antes</button>
+            </div>
+            <div id="caixaNovoDepois" class="caixaFuncionalidades">
+                <button id="btnAdicionarDepois">Adicionar Depois</button>
+            </div>
+            <div id="caixaRemoverCurso" class="caixaFuncionalidades">
+                <button id="btnRemoverCurso">Remover Selecionado</button>
+            </div>
+            <div id="caixaCursoSelecionado" class="caixaFuncionalidades">
+                <button id="btnCursoSelecionado">Curso Selecionado</button>
+            </div>
+        </div>
+        <div id="caixaCursos" class="caixa">
+            <!-- Cursos serão adicionados aqui -->
+        </div>
+    </main>
+    <script src="aula46.js"></script>
+    <script>
+        const caixaCursos=document.querySelector('#caixaCursos')
+        const cursos=['HTML', 'CSS', 'JavaScript', 'PHP', 'React', 'MySQL', 'ReactNative']
+        const btnRemoverCurso=document.getElementById('btnRemoverCurso')
+        const btnCursoSelecionado=document.getElementById('btnCursoSelecionado')
+        const btnAdicionarAntes=document.getElementById('btnAdicionarAntes')
+        const btnAdicionarDepois=document.getElementById('btnAdicionarDepois')
+        const nomeCurso=document.getElementById('nomeCurso')
+
+        let indice = 0
+
+        const tirarSelecao=()=>{ // Função para tirar seleção
+            const cursosSelecionados=[...document.querySelectorAll('.selecionado')]
+            cursosSelecionados.map((el)=>{
+                el.classList.remove('selecionado')
+            })
+        }
+        const criarNovoCurso=(curso)=>{
+            const novoElemento=document.createElement('div')
+            novoElemento.setAttribute('id', `c${indice}`)
+            novoElemento.setAttribute('class', 'curso c1')
+            novoElemento.innerHTML=curso
+            novoElemento.addEventListener('click', (evt)=>{
+                tirarSelecao() // antes de executar o toggle, remova quem já está selecionado
+                evt.target.classList.toggle('selecionado')
+            })
+            return novoElemento
+        }
+        cursos.map((el, chave) => {
+            const novoElemento=criarNovoCurso(el)
+            caixaCursos.appendChild(novoElemento)
+            indice++
+        })
+        const cursoSelecionado=()=> {
+            const cursosSelecionados=[...document.querySelectorAll('.selecionado')]
+            return cursosSelecionados[0]
+        }
+        btnCursoSelecionado.addEventListener('click', (evt)=> { 
+            try{
+                alert(`Curso selecionado: ${cursoSelecionado().innerHTML}`)
+            } catch(ex) {
+                alert('Selecione um curso')
+            }   
+        })
+        btnRemoverCurso.addEventListener('click', (evt)=> {          
+            const cs=cursoSelecionado()
+            if(cs!=undefined){
+                cs.remove()
+            } else {
+                alert('Selecione um curso')
+            }    
+        })
+        btnAdicionarAntes.addEventListener('click', (evt)=>{
+            try {
+                if(nomeCurso.value!=''){
+                    const novoCurso=criarNovoCurso(nomeCurso.value)
+                    caixaCursos.insertBefore(novoCurso, cursoSelecionado())
+                }else{
+                    alert('Digite o nome do curso')
+                }   
+            }catch(ex){
+                alert('Selecione um curso')
+            }
+        })
+        btnAdicionarDepois.addEventListener('click', (evt)=>{
+            try {
+                if(nomeCurso.value!=''){
+                    const novoCurso=criarNovoCurso(nomeCurso.value)
+                    caixaCursos.insertBefore(novoCurso, cursoSelecionado().nextSibling)
+                }else{
+                    alert('Digite o nome do curso')
+                }      
+            }catch(ex){
+                alert('Selecione um curso')
+            }
+        })
+    </script>
+</body>
+</html>

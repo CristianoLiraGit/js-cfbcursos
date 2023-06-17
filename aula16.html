@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas de Repetição</title>
+    <style>
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        pre {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.92em;
+            border: 1px solid red;
+            padding: 5px 5px 0px 5px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aula 16 - for in/for of</h1>
+    <p>Os loops podem ser definidos e indefinidos:</p>
+    <ol>
+        <li>Definidos</li>
+            <ul>
+                <li>for</li>
+            </ul>
+        <li>Indefinidos</li>
+            <ul>
+                <li>while</li>
+                <li>do while</li>
+            </ul>
+    </ol>
+    <p><mark><strong>For</strong></mark> - Usado quando se sabe a quantidade de iterações.</p>
+    <p><mark><strong>While/do while</strong></mark> - Usados quando não se sabe a quantidade de iterações.</p>
+    <p>Os loops <strong>for in</strong> e <strong>for of</strong> são variações do for</p>
+    <!-- <p>let num = [10, 20, 30, 40, 50]</p> -->
+    <!-- <p>for(n in num) {
+       <br> &nbsp &nbsp console.log(num[n])
+    <br>}</p>
+
+    <p>for(n of num) {
+        <br> &nbsp &nbsp console.log(n)
+     <br>}</p>
+     <p>Irá retornar: <br> 10 <br> 20 <br> 30 <br> 40 <br> 50</p> -->
+
+    <pre>
+        let num = [10, 20, 30, 40, 50] 
+
+        for(n in num) {          
+            console.log(num[n])
+        }
+    </pre>
+
+    <p>As duas formas mostradas com <mark><strong>for in</strong></mark> e <mark><strong>for of</strong></mark> dão o mesmo resultado</p>
+    <pre>
+        for(n of num) {        
+            console.log(n)      
+        }
+    </pre>
+    <p>Ou seja, vão imprimir o seguinte resultado:</p>
+    <pre>
+            10
+            20
+            30
+            40
+            50
+    </pre>
+
+    <div>Cristiano</div>
+    <div>CFB Cursos</div>
+    <div>Curso de JavaScript</div>
+    <script src="aula16.js"></script>
+</body>
+</html>

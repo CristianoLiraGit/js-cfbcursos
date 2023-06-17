@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções parametrizadas</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: yellow;
+        padding: 0px 10px 0px 10px;
+    }
+
+    nav {
+        display: flex;
+        flex-flow: row wrap;
+        padding: 10px;
+        background-color: white;
+        margin-bottom: 5px;
+        justify-content: center;
+        border-radius: 0px 0px 3px 3px ;
+        box-shadow: 1px 1px 15px #888888;
+    }
+
+    nav li {
+        display: inline-block;
+        /* padding-right: 15px; */
+        margin-left: 25px;
+        /* background-color: white; */
+    }
+
+    nav li:hover {
+        color: red;
+        text-decoration: underline;
+        /* font-size: 2em; */
+        font-weight: bold;
+    }
+
+    main {
+        background-color: white;
+        max-width: 1000px;
+        margin: auto;
+        padding: 10px;
+        border-radius: 3px;
+        box-shadow: 1px 1px 15px #888888;
+    }
+</style>
+<body>
+    <nav>
+        <ul>
+            <a href="#"><li>Link</li></a>
+            <a href="#"><li>Link</li></a>
+            <a href="#"><li>Link</li></a>
+            <a href="#"><li>Link</li></a>
+            <a href="#"><li>Link</li></a>
+        </ul>
+    </nav>
+    <main>
+        <h1>Aula 22 - Funções Parametrizadas</h1>
+        <p>Exemplo 1:</p>
+        <pre>
+            function soma(p1) {
+                console.log(p1)
+            }
+            
+            soma('Cristiano')
+            soma(2000)
+            soma(5.2)
+        </pre>
+        <p>Posso passar qualquer parâmetro para ser usado na função e retornado na tela.</p>
+        <p>Exemplo 2:</p>
+        <pre>
+            function soma(n1, n2) {
+                console.log(n1 + n2)
+            }
+            
+            soma('Cristiano')
+            soma(2000)
+            soma(5.2) 
+        </pre>
+        <p>Vai dar undefined em 'Cristiano', pois se trata de string. Em "soma(2000)" e em "soma(5.2)" vai dar NaN porque só foi passado um parâmetro para a função.</p> <br>
+        <p>Exemplo 3:</p>
+        <pre>
+            function soma(n1, n2) {
+                console.log(n1 + n2)
+            }
+            
+            soma(10, 5)
+        </pre>
+        <p>Vai retornar a soma de 10 e 5 = 15. Caso eu passe apenas um parâmetro ao chamar a função, vai NaN. É necessário estabelecer valores padrões para os parâmetros. Exemplo:</p>
+        <pre>
+            function soma(n1=0, n2=0) {
+                console.log(n1 + n2)
+            }
+            
+            soma(10) 
+        </pre>
+        <p>Ao chamar somente 10, o programa vai entender que vai ser uma soma entre 10 e 0, resultando em 10, pois o parâmetro não chamado assumiu o valor padrão de 0.</p>
+        <p>4101 2701 4573 2417 - 11/26 - 190 - cristiano barbosa lira</p>
+    </main>
+    
+    <script src="aula22.js"></script>
+</body>
+</html>

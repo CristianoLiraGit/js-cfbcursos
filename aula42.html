@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método Filter</title>
+</head>
+<body>
+    <h1>Aula 42 - Método Filter</h1>
+    <p>O método filter cria um novo array com os elementos especificados na função.</p>
+    <script>
+        // const filtroMaior18=(valor, indice, arr)=>{} // Se eu não for precisar do índice nem do array, uso somente o valor, conforme parâmetro abaixo
+        const filtroMaior18=(valor) => {
+            if (valor >= 18)
+                return valor
+        }
+
+        // const idades = [15, 21, 30, 17, 18, 44, 12, 50]
+        // const maior = idades.filter(filtroMaior18)
+
+        const idades = [15, 21, 30, 17, 18, 44, 12, 50] // Coleção iterável
+        const maior = idades.filter((val, ind, arr) => { // Criando a função dentro do filter
+            if (val >= 18)
+                return val
+        })
+        const menor = idades.filter((val, ind, arr) => {
+            if (val < 18)
+                return val
+        })
+
+        console.log(`As idades são: ${idades}`)
+        console.log(`Os maiores de idade são: ${maior}`)
+        console.log(`Os menores de idade são: ${menor}`)
+        // window.alert(`As idades são: ${idades}`)
+        // window.alert(`Os maiores de idade são: ${maior}`)
+        // window.alert(`Os menores de idade são: ${menor}`)
+    </script>
+</body>
+</html>

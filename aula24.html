@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções Anônimas</title>
+</head>
+<body>
+    <h1>Aula 24 - Funções Anônimas</h1>
+    <ul>
+        <li>Não têm nome padrão</li>
+        <li>Não são salvas na memória</li>
+        <li>Somente serão criadas no momento da execução</li>
+        <li>Deve ser associada a uma variável</li>
+    </ul>
+    <p>Exemplo:</p>
+    <pre>
+        let f = function(v1, v2){return v1 + v2}
+
+        <strong>Obs.:</strong>  o código acima pode ser feito da outra maneira:
+
+        let f = function(v1, v2){
+            return v1 + v2
+        }
+
+        console.log(f(10, 5 ))
+    </pre>
+    <hr>
+    <p>Mesmo código acima, usando parâmetros rest:</p>
+    <pre>
+        let f = function(...valores){
+            let res = 0
+            for(v of valores) {
+                res += v
+            }
+            return res
+        }
+
+        console.log(f(10, 5 ))
+    </pre>
+    <p>Função Construtor. Exemplo:</p>
+    <pre>
+        const f = new Function("v1", "v2", "v3", "return v1 + v2 + v3")
+
+        console.log(f(10, 5, 15))
+    </pre>
+    <p>É um tipo de função anônima mais resumida. Note que é necessário usar o F maiúsculo na palavra Function</p>
+    <script src="aula24.js"></script>
+</body>
+</html>
