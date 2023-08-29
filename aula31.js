@@ -7,12 +7,12 @@ const dc6=document.getElementById('c6')
 
 const arrayElementos=[dc1, dc2, dc3, dc4, dc5, dc6]
 
-// let colecaoHTML=document.getElementsByTagName('div')
+// let colecaoHTML=document.getElementsByTagName('div') // o html colection tem menos métodos para usar 
 
-// console.log(arrayElementos)
+// console.log(arrayElementos) // já o array tem muitos métodos a serem utilizados
 // console.log(colecaoHTML)
 
-const colecaoHTML=[...document.getElementsByTagName('div')]
+const colecaoHTML=[...document.getElementsByTagName('div')] // Ao usar o getElementsByTagName, o retorno é um html colection. Para converter em array, usa-se o método spread.
 
 console.log(colecaoHTML)
 
