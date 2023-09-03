@@ -11,7 +11,7 @@ cursos.pop(); // Elimina o último elemento (Python)
 cursos.unshift('Python'); // Adiciona Python no início
 cursos.shift(); // Elimina Python do início
 
-console.log(cursos[3][1][2]); // Conceito de matrizes
+console.log(cursos[3][3][2]); // Conceito de matrizes
 
 cursos.map((el)=>{
     let p = document.createElement("p");
