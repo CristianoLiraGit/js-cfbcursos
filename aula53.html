@@ -13,27 +13,51 @@
             font-size: large;
         }
 
-        body {
-            display: flex;
-            flex-direction: column;
-            /* justify-content: center; */ /*Descomente para testar*/
-            /* height: 100vh; */ /*Descomente para testar*/
-            align-items: center;
-        }
-
-        .caixa {
-            border: 5px solid #000;
-            width: 400px;
-            border-radius: 10px;
+        .valor {
             display: flex;
             flex-direction: column;
             margin: 5px;
+        }
+
+        .valor input {
+            background-color: #ddd;
             padding: 5px;
+            border-radius: 5px;
+        }
+
+        .operacoes {
+            display: flex;
+        }
+
+        button {
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            padding: 5px 15px;
+            display: flex;
+            margin: 5px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <div id="caixa" class="caixa"></div>
+    <div class="valor">
+        <label for="valor1">Valor 1</label>
+        <input type="text" name="valor1" id="valor1">
+    </div>
+    <div class="valor">
+        <label for="valor2">Valor 2</label>
+        <input type="text" name="valor2" id="valor2">
+    </div>
+    <div class="valor">
+        <label for="res">Resultado</label>
+        <input type="text" name="res" id="res">
+    </div>
+    <div class="operacoes">
+        <button id="btn_soma">+</button>
+        <button id="btn_subtracao">-</button>
+        <button id="btn_multiplicacao">*</button>
+        <button id="btn_divisao">/</button>
+    </div>
     <script src="aula52.js"></script>
     <script src="exercicio.js"></script>
 </body>
