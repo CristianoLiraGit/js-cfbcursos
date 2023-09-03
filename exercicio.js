@@ -6,7 +6,7 @@ const res=document.querySelector('#res')
 
 const op=[ // Foram criadas três funções dentro do array
     ()=>{
-        const val=[document.getElementById('valor1').value,document.getElementById('valor2').value]
+        const val=[document.getElementById('valor1').value,document.getElementById('valor2').value] // vírgula porque está recebendo dois valores, e é um array. Posição [0] e posição [1]
         res.value=Number(val[0])+Number(val[1])
     },
     ()=>{
