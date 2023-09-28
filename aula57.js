@@ -4,7 +4,7 @@ class Pessoa{
     }
 }
 
-let p1 = new Pessoa("Cristiano")
+let p1 = new Pessoa("Cristiano") // Foram criadas 3 instâncias da classe pessoa
 let p2 = new Pessoa("Natália")
 let p3 = new Pessoa("Gordo")
 
