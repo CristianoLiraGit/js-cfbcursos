@@ -1,6 +1,8 @@
 class Carro{
+    canal="CFB Cursos"
     constructor(nome, tipo){
         this.nome=nome
+        this.canal='YouTube'
         if(tipo ==1){
             this.tipo = "Esportivo"
             this.valmax = 300
@@ -15,10 +17,40 @@ class Carro{
             this.valmax = 180
         }
     }
+    
+    getNome(){
+        return this.nome
+    }
+
+    getTipo(){
+        return this.tipo
+    }
+
+    getVelMax(){
+        return this.velmax
+    }
+
+    getInfo(){
+        return [this.nome, this.tipo, this.velmax]
+    }
+
+    setNome(nome){
+        this.nome=nome
+    }
+
+    setTipo(tipo){
+        this.tipo=tipo
+    }
+
+    setVelMax(velmax){
+        this.velmax=velmax
+    }
+
     info(){
         console.log(`Nome: ${this.nome}.`)
-        console.log(`Nome: ${this.tipo}.`)
-        console.log(`Nome: ${this.velmax}.`)
+        console.log(`Tipo: ${this.tipo}.`)
+        console.log(`Vmax: ${this.velmax}.`)
+        console.log(`Canal: ${this.canal}.`)
         console.log(`----------------------------`)
     }
 }
@@ -35,4 +67,4 @@ console.log(c4.nome)
 
 c1.info()
 
-// Rever aula e finalizar
+// Rever aula
