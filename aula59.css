@@ -35,6 +35,7 @@
     padding: 5px;
     border-radius: 5px;
     display: flex;
+    margin: 0px 9px;
 }
 
 .pessoa {
@@ -44,4 +45,5 @@
     display: flex;
     width: 200px;
     display: flex;
+    margin: 5px;
 }
