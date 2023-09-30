@@ -1,33 +1,27 @@
-class Pessoa{
-    constructor(nome, idade){
-        this.nome=nome
-        this.idade=idade
-
-    }
-    
-    getNome(){
-        return this.nome
-    }
-
-    getIdade(){
-        return this.idade
-    }
-
-    setNome(nome){
-        this.nome=nome
-    }
-
-    setIdade(idade){
-        this.idade=idade
-    }
-
-    info(){
-        console.log(`Nome: ${this.nome}.`)
-        console.log(`Idade: ${this.idade}.`)
-        console.log(`----------------------------`)
-    }
+// Esta aula ensina como criar uma classe através de função
+function Pessoa(nome, idade){
+        this.nome=nome,
+        this.idade=idade,
+        this.getNome=function(){
+            return this.nome
+        },
+        this.getIdade=function(){
+            return this.idade
+        },
+        this.setNome=function(nome){
+            this.nome=nome
+        },
+        this.setIdade=function(idade){
+            this.idade=idade
+        },
+        
+        this.info=function(){
+            console.log(`Nome: ${this.nome}.`)
+            console.log(`Idade: ${this.idade}.`)
+            console.log(`----------------------------`)
+        }
+        
 }
-
 let pessoas = []
 
 const btn_add=document.querySelector('#btn_add')
