@@ -40,20 +40,20 @@ const addPessoa = ()=>{
         const div = document.createElement('div')
         div.setAttribute('class', 'pessoa')
         div.innerHTML = `Nome: ${p.getNome()}<br/>Idade: ${p.getIdade()}`
-        res.appendChild('div')
+        res.appendChild(div)
     })
 }
 
 btn_add.addEventListener('click',(evt)=>{
     const nome = document.querySelector("#f_nome")
     const idade = document.querySelector("#f_idade")
-    const p = new Pessoa(nome.value, idade.value)
+    const p = new Pessoa(nome.value, idade.value) // Criando nova instância
     pessoas.push(p)
     nome.value=""
     idade.value=""
-    nome.focus()
+    nome.focus() // Posiciona o cursor no campo nome após apagar os campos
     console.log(pessoas)
+    addPessoa()
 
 })
 
-// não funcionou. Foda-se
