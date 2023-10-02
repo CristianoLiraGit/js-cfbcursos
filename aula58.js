@@ -21,27 +21,21 @@ class Carro{
     getNome(){
         return this.nome
     }
-
     getTipo(){
         return this.tipo
     }
-
     getVelMax(){
         return this.velmax
     }
-
     getInfo(){
         return [this.nome, this.tipo, this.velmax]
     }
-
-    setNome(nome){
+    setNome(nome){ // O set altera o valor das propriedades
         this.nome=nome
     }
-
     setTipo(tipo){
         this.tipo=tipo
     }
-
     setVelMax(velmax){
         this.velmax=velmax
     }
