@@ -1,3 +1,4 @@
+// Molde da classe Pessoa ↓↓↓
 class Pessoa{
     constructor(nome, idade){
         this.nome=nome
@@ -27,6 +28,8 @@ class Pessoa{
         console.log(`----------------------------`)
     }
 }
+
+// Molde da classe Pessoa (fim) ↑↑↑
 
 let pessoas = []
 
