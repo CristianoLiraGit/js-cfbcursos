@@ -1,25 +1,25 @@
 // Esta aula ensina como criar uma classe através de função
 function Pessoa(nome, idade){
-        this.nome=nome,
-        this.idade=idade,
-        this.getNome=function(){
-            return this.nome
-        },
-        this.getIdade=function(){
-            return this.idade
-        },
-        this.setNome=function(nome){
-            this.nome=nome
-        },
-        this.setIdade=function(idade){
-            this.idade=idade
-        },
-        
-        this.info=function(){
-            console.log(`Nome: ${this.nome}.`)
-            console.log(`Idade: ${this.idade}.`)
-            console.log(`----------------------------`)
-        }
+    this.nome=nome,
+    this.idade=idade,
+    this.getNome=function(){
+        return this.nome
+    },
+    this.getIdade=function(){
+        return this.idade
+    },
+    this.setNome=function(nome){
+        this.nome=nome
+    },
+    this.setIdade=function(idade){
+        this.idade=idade
+    },
+    
+    this.info=function(){
+        console.log(`Nome: ${this.nome}.`)
+        console.log(`Idade: ${this.idade}.`)
+        console.log(`----------------------------`)
+    }
         
 }
 let pessoas = []
