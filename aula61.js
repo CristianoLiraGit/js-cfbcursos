@@ -35,3 +35,17 @@ const Pessoa = {
     idade.value = "";
     nome.focus();
   });
+
+
+  /*
+  const p2=Pessoa
+  const p3=Pessoa
+
+  p3.nome="Cláudio"
+  p2["nome"]="Brigite"
+  Pessoa.setNome("Patrick")
+
+  console.log(Pessoa.nome)
+  console.log(p2.getNome())
+  console.log(p3.nome)
+  */
