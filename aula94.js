@@ -11,4 +11,4 @@ import * as n_cursos from "./cursos3.js"; // Aqui, o asterisco (*) pega tudo que
 // console.log(gc[0])
 console.log(n_cursos.cursos)
 console.log(n_cursos.getCurso(1))
-console.log(n_cursos.default)
+console.log(n_cursos.default())
