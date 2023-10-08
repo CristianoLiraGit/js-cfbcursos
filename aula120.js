@@ -3,13 +3,18 @@ const f_nota=document.querySelector('#f_nota');
 const f_msg=document.querySelector('#f_msg');
 
 document.querySelector("#btn_validar").addEventListener('click', (evt)=>{
-    let msg=null
+    let estadoValidacao=f_nota.validity
 
-    if(!f_nota.checkValidity()){ // Validação nativa
-        msg=f_nota.validationMessage
+    if(estadoValidacao.valueMissing){ // Validação nativa
+        f_nota.setCustomValidity("Poxa, este campo é obrigatório!")
+    }else if(estadoValidacao.rangeOverflow){
+        f_nota.setCustomValidity('Nossa, que nota alta você digitou!')
+    }else if(estadoValidacao.rangeUnderflow){
+        f_nota.setCustomValidity('Credo! Que nota baixa você digitou!!!')
     }
 
-    f_msg.innerHTML=msg
+    f_nota.reportValidity() // Mensagem de alerta temporária no próprio campo. Não precisa de setTimeOut()
+    f_nome.innerHTML=f_nota.validationMessage
     evt.preventDefault() // Evita que a página seja recarregada (envio do formulário); pode ser colocado no início, bem como no final do bloco (caso haja outras instruções antes)
 })
 
