@@ -2,8 +2,9 @@ const f_nome=document.querySelector('#f_nome');
 const f_nota=document.querySelector('#f_nota');
 const f_msg=document.querySelector('#f_msg');
 
-document.querySelector("#btn_validar").addEventListener('click', (evt)=>{
-    let estadoValidacao=f_nota.validity
+// Aqui abaixo, o btn_validar foi chamado e atribuiu-se a ele um eventListener sem criar uma variável. Como o botão só foi chamado uma vez no programa, essa estratégia é válida. Em casos que o botão fosse mais utilizado, seria necessário criar uma variável.
+document.querySelector("#btn_validar").addEventListener('click', (evt)=>{ 
+    let estadoValidacao=f_nota.validity 
 
     if(estadoValidacao.valueMissing){ // Validação nativa
         f_nota.setCustomValidity("Poxa, este campo é obrigatório!")
