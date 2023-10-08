@@ -37,6 +37,6 @@ Propriedades de validação
 • stepMismatch: true, se o valor de um elemento for inválido por seu atributo step.
 • tooLong: true, se o valor de um elemento exceder seu atributo maxLength.
 • typeMismatch: true, se o valor de um elemento for inválido por seu atributo type.
-• alueMissing: true, se um elemento (com um atributo obrigatório) não tiver valor.
+• valueMissing: true, se um elemento (com um atributo obrigatório) não tiver valor.
 • valid: true, se o valor de um elemento for válido.
 */
