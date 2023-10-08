@@ -15,7 +15,7 @@ document.querySelector("#btn_validar").addEventListener('click', (evt)=>{
 
     f_nota.reportValidity() // Mensagem de alerta temporária no próprio campo. Não precisa de setTimeOut()
     f_nome.innerHTML=f_nota.validationMessage
-    evt.preventDefault() // Evita que a página seja recarregada (envio do formulário); pode ser colocado no início, bem como no final do bloco (caso haja outras instruções antes)
+    evt.pre5ventDefault() // Evita que a página seja recarregada (envio do formulário); pode ser colocado no início, bem como no final do bloco (caso haja outras instruções antes)
 })
 
 /*
