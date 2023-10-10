@@ -51,3 +51,5 @@ promise.catch((retorno)=>{  // Se deu errado, cai aqui
 }) 
 
 numero.innerHTML='Processando...'
+
+// Continuar...
