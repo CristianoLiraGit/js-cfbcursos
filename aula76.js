@@ -30,10 +30,21 @@ const btn_promessa=document.getElementById('btn_promessa')
 btn_promessa.addEventListener('click', (evt)=>{
     numero.innerHTML='Processando...' 
     promessa() // Chamar a função promessa criada abaixo       
+        .then((retorno)=>{  // Se deu certo, cai aqui
+            numero.innerHTML=retorno
+            numero.classList.remove('erro')
+            numero.classList.add('ok')
+        }) 
+        
+        .catch((retorno)=>{  // Se deu errado, cai aqui
+            numero.innerHTML=retorno
+            numero.classList.add("erro")
+            numero.classList.remove('ok')
+        }) 
 })
     
 const promessa=()=>{
-    let promise=new Promise((deu_certo, deu_errado)=>{ // Coloquei parâmetros com nomes sujestivos/explicativos (pode ser qualquer nome para os parâmetros)
+    let p=new Promise((deu_certo, deu_errado)=>{ // Coloquei parâmetros com nomes sujestivos/explicativos (pode ser qualquer nome para os parâmetros)
         let resultado=false //! valor fixo como falso
         let tempo=3000
         setTimeout(()=>{
@@ -44,19 +55,9 @@ const promessa=()=>{
             }
         },tempo)
     })
-        promise.then((retorno)=>{  // Se deu certo, cai aqui
-            numero.innerHTML=retorno
-            numero.classList.remove('erro')
-            numero.classList.add('ok')
-        }) 
-        
-        promise.catch((retorno)=>{  // Se deu errado, cai aqui
-            numero.innerHTML=retorno
-            numero.classList.add("erro")
-            numero.classList.remove('ok')
-        }) 
+    return p
 }
     numero.innerHTML='Esperando'
 
 
-// Continuar...
+// Rever aula.
