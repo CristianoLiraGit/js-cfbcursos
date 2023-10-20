@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-.div_relogio{
+.relogio{
     display: flex;
     justify-content: center;
     align-items: center;
