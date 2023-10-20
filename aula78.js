@@ -1,5 +1,6 @@
 const data=new Date() // Foi instanciado um objeto da classe Date
 const div_data=document.getElementById('div_data')
+const relogio=document.getElementById('relogio')
 
 let dia=data.getDate()
 dia=dia<10?"0"+dia:dia // se dia for menor que 10, adicione um zero concatenado com o respectivo dia, caso contrário, adicione somente o dia respectivo (maior que 10)
@@ -9,19 +10,7 @@ mes=mes<10?"0"+mes:mes
 
 const data_r=`${dia}/${mes}/${data.getFullYear()}`
 
-console.log(data)
-// Posso usar o console diretamente, sem precisar instanciar:
-console.log(new Date())
-
-console.log(Date.now()) // Timestamp
-
-console.log(`O dia do mês é ${data.getDate()}.`)
-
-console.log(data.toDateString())
-
 div_data.innerHTML=data_r
-
-
 
 /*
 getDate() = Dia do mês
