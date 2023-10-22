@@ -1,11 +1,25 @@
-const data=new Date() // Foi instanciado um objeto da classe Date
 const div_data=document.getElementById('div_data')
 const div_relogio=document.getElementById('div_relogio')
+const btn_ativar=document.getElementById('btn_ativar')
+const btn_parar=document.getElementById('btn_parar')
+const tmp_alarme=document.getElementById('tmp_alarme')
+const hora_alarme=document.getElementById('hora_alarme')
+const timer=document.getElementById('timer')
+
+const som_alarme=new Audio('alarm.wav')
+som_alarme.loop=-1 //! -1 define o loop como infinito
+
+let ts_atual=null
+let ts_alarme=null
+let alarme_ativado=false
+let alarme_tocando=false
+
+const data=new Date() // Foi instanciado um objeto da classe Date
 
 let dia=data.getDate()
 dia=dia<10?"0"+dia:dia //* se dia for menor que 10, adicione um zero concatenado com o respectivo dia, caso contrário, adicione somente o dia respectivo (maior que 10)
 
-let mes=data.getMonth()
+let mes=data.getMonth()+1 // Adicionei um porque o primeiro mês é zero
 mes=mes<10?"0"+mes:mes
 
 const data_r=`${dia}/${mes}/${data.getFullYear()}`
@@ -47,3 +61,4 @@ setSeconds() = Define segundos
 setMilliseconds() = Define milisegundos
 toDateString() = Retorna somente a data
 */
+
