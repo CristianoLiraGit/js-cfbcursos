@@ -19,7 +19,20 @@ btn_ativar.addEventListener('click', ()=>{
     ts_alarme=ts_atual+(tmp_alarme.value*1000)
     alarme_ativado=true
     const dt_alarme=new Date(ts_alarme)
+    //! formatar o zero na hora, minuto e segundo menor que 10:
+    
     hora_alarme.innerHTML= `Hora do Alarme: ${dt_alarme.getHours()}:${dt_alarme.getMinutes()}:${dt_alarme.getSeconds()}`
+    // let hora=data.getHours()
+    // hora=hora<10?"0"+hora:hora
+    
+    // let minuto=data.getMinutes()
+    // minuto=minuto<10?"0"+minuto:minuto
+    
+    // let segundo=data.getSeconds()
+    // segundo=segundo<10?"0"+segundo:segundo
+    
+    // hora_alarme.innerHTML=`Hora do Alarme: ${hora}:${minuto}:${segundo}`
+    
 })
 
 btn_parar.addEventListener('click', ()=>{
