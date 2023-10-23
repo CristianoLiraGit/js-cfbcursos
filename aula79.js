@@ -31,7 +31,7 @@ btn_ativar.addEventListener('click', ()=>{
     // let segundo=data.getSeconds()
     // segundo=segundo<10?"0"+segundo:segundo
     
-    // hora_alarme.innerHTML=`Hora do Alarme: ${hora}:${minuto}:${segundo}`
+    // hora_alarme.innerHTML=`Hora do Alarme: ${hora}:${minuto}:${segundo}` //! Não deu certo!
     
 })
 
