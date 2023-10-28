@@ -32,7 +32,7 @@ const computadores = [
 computador['monitor']='22pol' //! Outras formas de adicionar propriedades
 computador.placaVideo='rtx'
 
-console.log(computador['monitor'])
+console.log(computador['monitor']) 
 
 computadores.forEach((c)=>{
     const div=document.createElement('div')
