@@ -26,7 +26,7 @@ setCustomValidity()
 
 Propriedade de validação do DOM
 • validity
-• validaionMessage
+• validationMessage
 
 Propriedades de validação
 
