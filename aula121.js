@@ -13,8 +13,13 @@ localStorage.setItem('numero', num)
 localStorage.setItem("nome","Cristiano")
 localStorage.setItem("canal",  "CFB Cursos")
 localStorage.setItem("curso", curso)
-// Remover as chaves locais criadas:
-// localStorage.clear()
+// alert(localStorage.length)
+// alert(localStorage.getItem(localStorage.key(0)))
+// alert(localStorage.getItem("nome"))
+// alert(localStorage.getItem("canal"))
+// alert(localStorage.getItem("curso"))
+//! Remover as chaves locais criadas:
+//? localStorage.clear()
 
 sessionStorage.setItem('nome', 'Cristiano')
 sessionStorage.setItem("canal",  "CFB Cursos")
