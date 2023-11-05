@@ -9,6 +9,8 @@ btn_texto.addEventListener('click', (evt)=>{
 let num = 10
 let curso = "JavaScript"
 // chaves e valores foram adicionados no localStorage
+//? window.localStorage.setItem('chave', valor) 
+//! Não é obrigatório colocar o window no começo
 localStorage.setItem('numero', num)
 localStorage.setItem("nome","Cristiano")
 localStorage.setItem("canal",  "CFB Cursos")
