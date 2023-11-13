@@ -1,4 +1,4 @@
-const endpoint='url da api'
+const endpoint='https://replit.com/@cristianosclira/Nodejs#index.js'
 fetch(endpoint)
 .then(res=>res.json())
 .then(dados=>{
