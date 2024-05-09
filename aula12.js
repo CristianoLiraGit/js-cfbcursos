@@ -18,7 +18,9 @@ const obj2 = [...document.getElementsByTagName('div')] // array → array tem no
 
 // Ao pegar uma coleção de elementos (html colection jogador1) e espalhar com spread em um array (jogador2), teremos uma quantidade maior de opções de parâmetros a serem utilizados. Veja os exemplos abaixo: (digite obj1. e obj2. e confira)
 
-
+obj2.forEach(element => { // iterar elemento por elemento do array
+    element.innerHTML = 'Curso'
+})
 
 console.log(obj1)
 console.log(obj2)
