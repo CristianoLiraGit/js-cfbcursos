@@ -1,5 +1,13 @@
 // A função map é muito utilizada para percorrer arrays. Essencial quando se que percorrer elemento por elemento de uma coleção, iterando toda a coleção.
 
+let el = document.getElementsByTagName('div')
+el = [... el]
+el.map((e, i)=>{
+    // console.log(e)
+    // console.log(e.innerHTML)
+    e.innerHTML = 'CFB Cursos'
+})
+
 // const cursos = ['HTML', 'CSS', 'JavaScript', 'PHP', 'React']
 // cursos.map((el, i)=>{ // O map é semelhante ao for
 //     console.log(`Curso: ${el} - Posição: ${i}`)
