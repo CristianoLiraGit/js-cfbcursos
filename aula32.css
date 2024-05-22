@@ -37,3 +37,7 @@
     border-color: #f00 !important;
 }
 
+.destaque:hover {
+    border-color: #ccc !important;
+}
+
