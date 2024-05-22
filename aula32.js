@@ -15,4 +15,4 @@ btn.addEventListener('click', ()=>{ // coloquei uma função dentro de outra:
     })
 })
 
-// Fazer uma função ligada a um botão para limpar a formatação, deixando a classe inicial
+//! Fazer uma função ligada a um botão para limpar a formatação, deixando a classe inicial
