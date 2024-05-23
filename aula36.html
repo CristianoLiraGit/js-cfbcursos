@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio</title>
+    <title>Desafio -Aula 36</title>
 </head>
 <style>
     * {
@@ -98,7 +98,7 @@
 
         btn_transferir.addEventListener('click', () => {
             const cursosSelecionados=[...document.querySelectorAll('.selecionado')]
-            const cursosNaoSelecionados=[...document.querySelectorAll('.curso:not(.selecionado)')]
+            const cursosNaoSelecionados=[...document.querySelectorAll('.curso:not(.selecionado)')] // Dos elementos da classe "curso", traga para mim todos os elementos que não possuem a classe "selecionado".
             cursosSelecionados.map((el) => {
                 caixa2.appendChild(el)
             })
